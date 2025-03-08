@@ -15,14 +15,14 @@ app = Flask(__name__)
 
 # Set environment variables
 FILE_PATH = os.environ.get('FILE_PATH', './temp')
-PROJECT_URL = os.environ.get('URL', 'https://python-laowang-2go-gunpjgofzq4iwqvbvkrapph.streamlit.app') # 填写项目分配的url可实现自动访问，例如：https://www.google.com，留空即不启用该功能
+PROJECT_URL = os.environ.get('URL', '') # 填写项目分配的url可实现自动访问，例如：https://www.google.com，留空即不启用该功能
 INTERVAL_SECONDS = int(os.environ.get("TIME", 120))                   # 访问间隔时间，默认120s，单位：秒
 UUID = os.environ.get('UUID', 'a87056c0-abeb-45e4-a97e-f23bdf84d191')
 NEZHA_SERVER = os.environ.get('NEZHA_SERVER', 'nz.abcd.com')        # 哪吒3个变量不全不运行
 NEZHA_PORT = os.environ.get('NEZHA_PORT', '5555')                  # 哪吒端口为{443,8443,2096,2087,2083,2053}其中之一时开启tls
 NEZHA_KEY = os.environ.get('NEZHA_KEY', '')
-ARGO_DOMAIN = os.environ.get('ARGO_DOMAIN', 'streamlit.aser.us.kg')                   # 国定隧道域名，留空即启用临时隧道
-ARGO_AUTH = os.environ.get('ARGO_AUTH', 'eyJhIjoiNTk5MzUwOTkyOTQzNmJkYzVhNTdmYjJmN2Y5YTlkMjAiLCJ0IjoiNDUyOTRhYTEtMTBmZi00ZDA5LThkNTUtOTljMTBkN2YwMzViIiwicyI6Ik5qZzJOemxpTWpFdE9UWmlOaTAwTm1abUxXRTBaamd0WkdNMlpqVTRaVGRqWkRaaSJ9')                      # 国定隧道json或token，留空即启用临时隧道
+ARGO_DOMAIN = os.environ.get('ARGO_DOMAIN', 'meteorus.tisimo.cloudns.biz')                   # 国定隧道域名，留空即启用临时隧道
+ARGO_AUTH = os.environ.get('ARGO_AUTH', 'eyJhIjoiNTk5MzUwOTkyOTQzNmJkYzVhNTdmYjJmN2Y5YTlkMjAiLCJ0IjoiZDU1MjgxYmEtYzJjZi00ODBkLWI5OTMtMzk4MDQ1MWI0NjU3IiwicyI6Ik5EUTBObUppT0dNdE16SmtOaTAwTjJWbExUbGtZbU10WmpJMk1qazBNRGRsT1RSayJ9')                      # 国定隧道json或token，留空即启用临时隧道
 CFIP = os.environ.get('CFIP', 'skk.moe')
 NAME = os.environ.get('NAME', 'Vls')
 PORT = int(os.environ.get('SERVER_PORT') or os.environ.get('PORT') or 3000)  # 订阅端口，游戏玩具类若无法订阅可改为分配的端口
